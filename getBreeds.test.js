@@ -1,4 +1,4 @@
-const getBreeds = require("./getBreeds");
+import getBreeds from "./getBreeds";
 
 const axios = require("axios");
 jest.mock("axios");

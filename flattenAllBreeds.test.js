@@ -1,4 +1,4 @@
-const flattenAllBreeds = require("./flattenAllBreeds.js");
+import flattenAllBreeds from "./flattenAllBreeds";
 
 test("flattens obj of breeds to array", () => {
   const toTest = {

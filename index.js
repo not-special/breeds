@@ -1,11 +1,9 @@
-const express = require("express");
+import express from "express";
+import flattenAllBreeds from "./flattenAllBreeds.js";
+import getBreeds from "./getBreeds.js";
+
 const app = express();
-
-const flattenAllBreeds = require("./flattenAllBreeds.js");
-const getBreeds = require("./getBreeds.js");
-
 const port = 3001;
-
 
 app.get("/breeds", async (req, res) => {
   try{
@@ -17,16 +15,6 @@ app.get("/breeds", async (req, res) => {
   }
 })
 
-// app.use((req, res, next) => {
-//   console.log("here!");
-//   return res.json({
-//     error: "Error"
-//   })
-// })
-
-
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
-
-module.exports = app;

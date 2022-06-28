@@ -1,4 +1,4 @@
-const axios = require("axios");
+import axios from "axios";
 const BASE_URL='https://dog.ceo';
 const PATH = '/api/breeds/list/all';
 
@@ -12,4 +12,4 @@ async function getBreeds() {
   }
 }
 
-module.exports = getBreeds;
+export default getBreeds;

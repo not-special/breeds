@@ -1,4 +1,3 @@
-
 const flattenAllBreeds = (allBreeds) => {
   let flatBreeds = [];
   for (let breed in allBreeds) {
@@ -13,4 +12,4 @@ const flattenAllBreeds = (allBreeds) => {
   return flatBreeds;
 }
 
-module.exports = flattenAllBreeds;
+export default flattenAllBreeds;
