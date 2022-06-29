@@ -20,19 +20,9 @@ describe('getBreeds', () => {
   
   it("handles external API error", async () => {
     const errorMessage = "Network Error";
-    
-    axios.get.mockImplementationOnce(() => {
-      Promise.reject(new Error(errorMessage));
-    })
-    try {
-      await getBreeds();
-      // await expect(getBreeds()).rejects.toEqual(new Error(errorMessage));
-    } catch (err) {
-      console.log("***here***: ", err);
-      // await expect(getBreeds()).rejects.toThrow("?");
-      expect(err).toEqual(new Error(errorMessage));
-    }
-    
-  })
+    axios.get.mockRejectedValueOnce(errorMessage);
+
+    await expect(getBreeds()).rejects.toThrow(errorMessage);
+  });
 })
 

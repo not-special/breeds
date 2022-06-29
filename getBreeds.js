@@ -7,8 +7,7 @@ async function getBreeds() {
     const response = await axios.get(`${BASE_URL}${PATH}`);
     return response;
   } catch (err) {
-    console.error(err);
-    // throw new Error("API call failed");
+    throw new Error(err);
   }
 }
 
